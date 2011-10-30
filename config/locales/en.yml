@@ -1,0 +1,4 @@
+# English strings go here
+en:
+  button_add_by_reference: "Add by reference"
+  button_create_project_ticket: "Create a PROD ticket"

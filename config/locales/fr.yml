@@ -1,0 +1,4 @@
+# French strings go here
+fr:
+  button_add_by_reference: 'Ajouter par référence'
+  button_create_project_ticket: "Créer un ticket PROD"

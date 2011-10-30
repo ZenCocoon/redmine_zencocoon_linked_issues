@@ -1,0 +1,7 @@
+body.controller-issues #relations table.list td.buttons {
+	width: auto;
+}
+
+body.controller-issues #relations .contextual a:not(:last-child) {
+	margin-right: 10px;
+}
