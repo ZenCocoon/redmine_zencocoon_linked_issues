@@ -1,5 +1,13 @@
 require 'redmine'
 
+require 'dispatcher'
+
+Dispatcher.to_prepare do
+  unless IssuesController.include?(RedmineZenCocoonLinkedIssues::Patchs::IssuesControllerPatch)
+    IssuesController.send(:include, RedmineZenCocoonLinkedIssues::Patchs::IssuesControllerPatch)
+  end
+end
+
 Redmine::Plugin.register :redmine_zencocoon_linked_issues do
   name 'Redmine Zencocoon Linked Issues Plugin'
   author 'Sébastien Grosjean - ZenCocoon'

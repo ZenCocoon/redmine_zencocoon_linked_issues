@@ -20,14 +20,6 @@ Allow cross-project issue relations from `/settings?tab=issues`
 Setup the project ID (eg. 1) within `lib/redmine_zencocoon_linked_issues/constants.rb`
 Update the link name if needed with the translations files at `config/locales/*.yml` and `lang/*.yml`
 
-## Usage
-
-To use in a `development` environment, please make sure to add the following settings in you `config/environments/development.rb`
-
-    config.to_prepare do
-      IssuesController.send(:include, RedmineZenCocoonLinkedIssues::IssuesControllerPatch)
-    end
-
 ## License
 
 MIT License. Copyright 2011 Sébastien Grosjean
