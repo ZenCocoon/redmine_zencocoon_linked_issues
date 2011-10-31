@@ -20,6 +20,3 @@ module RedmineZenCocoonLinkedIssues
     end
   end
 end
-
-# Add module to IssuesController
-IssuesController.send(:include, RedmineZenCocoonLinkedIssues::Patchs::IssuesControllerPatch)

@@ -2,8 +2,9 @@ require 'redmine'
 
 require 'dispatcher'
 
-Dispatcher.to_prepare do
-  unless IssuesController.include?(RedmineZenCocoonLinkedIssues::Patchs::IssuesControllerPatch)
+Dispatcher.to_prepare :redmine_zencocoon_linked_issues do
+  require_dependency 'issues_controller'
+  unless IssuesController.included_modules.include?(RedmineZenCocoonLinkedIssues::Patchs::IssuesControllerPatch)
     IssuesController.send(:include, RedmineZenCocoonLinkedIssues::Patchs::IssuesControllerPatch)
   end
 end
