@@ -22,4 +22,4 @@ Update the link name if needed with the translations files at `config/locales/*.
 
 ## License
 
-MIT License. Copyright 2011 Sébastien Grosjean
+MIT License. Copyright 2011 Sébastien Grosjean, sponsored by [Tedemis](http://www.tedemis.com)
