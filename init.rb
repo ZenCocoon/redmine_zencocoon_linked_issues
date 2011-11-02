@@ -13,7 +13,7 @@ Redmine::Plugin.register :redmine_zencocoon_linked_issues do
   name 'Redmine Zencocoon Linked Issues Plugin'
   author 'Sébastien Grosjean - ZenCocoon'
   description 'Create linked issues owned by a predefined project with extreme ease.'
-  version '0.0.1'
+  version '0.0.2'
   author_url 'http://www.zencocoon.com'
 end
 

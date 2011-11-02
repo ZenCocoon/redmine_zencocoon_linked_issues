@@ -2,6 +2,6 @@ body.controller-issues #relations table.list td.buttons {
 	width: auto;
 }
 
-body.controller-issues #relations .contextual a:not(:last-child) {
+body.controller-issues #relations .contextual a#create_linked_issue {
 	margin-right: 10px;
 }
