@@ -12,7 +12,7 @@ I'll return to the `Issue A`
 
 ## Install
 
-Copy the plugin source as `vendor/plugins/redmine_zencocoon_linked_issues`
+Copy the plugin source as `plugins/redmine_zencocoon_linked_issues`
 
 ## Setup
 
@@ -22,4 +22,4 @@ Update the link name if needed with the translations files at `config/locales/*.
 
 ## License
 
-MIT License. Copyright 2011 Sébastien Grosjean, sponsored by [Tedemis](http://www.tedemis.com)
+MIT License. Copyright 2011-2013 Sébastien Grosjean, sponsored by [Tedemis](http://www.tedemis.com)

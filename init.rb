@@ -1,11 +1,21 @@
-require 'redmine'
+# require 'redmine'
 
-require 'dispatcher'
+# Including dispatcher.rb in case of Rails 2.x
+require 'dispatcher' unless Rails::VERSION::MAJOR >= 3
 
-Dispatcher.to_prepare :redmine_zencocoon_linked_issues do
-  require_dependency 'issues_controller'
-  unless IssuesController.included_modules.include?(RedmineZenCocoonLinkedIssues::Patchs::IssuesControllerPatch)
-    IssuesController.send(:include, RedmineZenCocoonLinkedIssues::Patchs::IssuesControllerPatch)
+if Rails::VERSION::MAJOR >= 3
+  ActionDispatch::Callbacks.to_prepare do
+    require_dependency 'issues_controller'
+    unless IssuesController.included_modules.include?(RedmineZenCocoonLinkedIssues::Patchs::IssuesControllerPatch)
+      IssuesController.send(:include, RedmineZenCocoonLinkedIssues::Patchs::IssuesControllerPatch)
+    end
+  end
+else
+  Dispatcher.to_prepare :redmine_zencocoon_linked_issues do
+    require_dependency 'issues_controller'
+    unless IssuesController.included_modules.include?(RedmineZenCocoonLinkedIssues::Patchs::IssuesControllerPatch)
+      IssuesController.send(:include, RedmineZenCocoonLinkedIssues::Patchs::IssuesControllerPatch)
+    end
   end
 end
 
@@ -13,7 +23,7 @@ Redmine::Plugin.register :redmine_zencocoon_linked_issues do
   name 'Redmine Zencocoon Linked Issues Plugin'
   author 'Sebastien Grosjean - ZenCocoon'
   description 'Create linked issues owned by a predefined project with extreme ease.'
-  version '0.0.3'
+  version '1.0.0-beta1'
   author_url 'http://www.zencocoon.com'
 end
 
